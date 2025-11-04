@@ -7,18 +7,16 @@ class LinkedList {
         Node* tail;
         
     public:
-        LinkedList(int value) {}
-        ~LinkedList() {}
+        LinkedList(int value);
+        ~LinkedList();
 
-        void printList() {}
+        void printList();
 
-        Node* getHead() {}
-        Node* getTail() {}
+        Node* getHead();
+        Node* getTail();
         
-        void makeEmpty() {}
-        void append(int value) {}
-
-        Node* findMiddleNode() {}
+        void makeEmpty();
+        void append(int value);
 
 };
 
