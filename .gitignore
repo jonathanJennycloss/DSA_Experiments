@@ -1,0 +1,36 @@
+# Ignore build output
+/build/
+
+# Visual Studio / VSCode / CMake files
+.vscode/
+.vs/
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio generated files
+*.user
+*.suo
+*.idb
+*.pdb
+*.ilk
+
+# CMake generated cache and build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Binary/executable files
+*.exe
+*.dll
+*.lib
+*.obj
+*.o
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -1,15 +1,17 @@
 #include <iostream>
 #include "LinkedList.hpp"
 
-using namespace std;
-
 LinkedList::LinkedList(int value) {
+    // Create the initial node. head and tail point to the same node for a
+    // one-element list.
     Node* newNode = new Node(value);
     head = newNode;
     tail = newNode;
 }
 
 LinkedList::~LinkedList(){
+    // Delete the whole chain safely. This walks the list and deletes each
+    // node. After this method runs all owned nodes are freed.
     Node* temp = head;
     while (head) {
         head = head->next;
@@ -21,17 +23,17 @@ LinkedList::~LinkedList(){
 void LinkedList::printList() {
     Node* temp = head;
     if (temp == nullptr) {
-        cout << "empty";
+        std::cout << "empty";
     } else {
         while (temp != nullptr) {
-            cout << temp->value;
+            std::cout << temp->value;
             temp = temp->next;
             if (temp != nullptr) {
-                cout << " -> ";
+                std::cout << " -> ";
             }
         }
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
 Node* LinkedList::getHead() {
@@ -53,6 +55,7 @@ void LinkedList::makeEmpty() {
 }
 
 void LinkedList::append(int value) {
+    // Append to tail in O(1) time by keeping a `tail` pointer.
     Node* newNode = new Node(value);
     if (head == nullptr) {
         head = newNode;

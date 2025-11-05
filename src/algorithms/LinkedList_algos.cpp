@@ -30,20 +30,3 @@ Node* findMiddleNode(LinkedList& list) {
     }
     return slow;
 }
-
-int main() {
-    LinkedList myList(1);
-    myList.append(2);
-    myList.append(3);
-    myList.append(4);
-    myList.append(5);
-
-    Node* middle = findMiddleNode(myList);
-    if (middle) {
-        std::cout << "Middle node value: " << middle->value << std::endl;
-    } else {
-        std::cout << "The list is empty." << std::endl;
-    }
-
-    return 0;
-}
